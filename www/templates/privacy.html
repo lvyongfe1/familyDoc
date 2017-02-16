@@ -1,0 +1,72 @@
+
+<ion-view view-title="隐私设置">
+
+
+  <!--<ion-nav-buttons side="left">-->
+    <!--<button class="button button-icon icon ion-ios-arrow-back"  ng-click="goback()" ><i>返回</i>-->
+    <!--</button>-->
+  <!--</ion-nav-buttons>-->
+  <ion-content>
+
+
+  <div class="col " style=" background-color: whitesmoke;     border-bottom: 1px solid #ddd">
+    <div class="col col-50" style="font-size: larger;   color: darkgray" >您的隐私记录 </div>
+  </div>
+
+    <label class="item item-input item-toggle">
+      <!--<ion-toggle ng-model="tempAlarm" toggle-class="toggle-calm" ng-click="checkAlarmClick()">提醒</ion-toggle>-->
+      <span class="input-label">用药记录</span>
+      <label class="toggle">
+        <input type="checkbox" ng-checked="newRecord.alarm" ng-click="checkAlarmClick($event)">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </label>
+
+
+    <label class="item item-input item-toggle">
+      <!--<ion-toggle ng-model="tempAlarm" toggle-class="toggle-calm" ng-click="checkAlarmClick()">提醒</ion-toggle>-->
+      <span class="input-label">就诊记录</span>
+      <label class="toggle">
+        <input type="checkbox" ng-checked="newRecord.alarm" ng-click="checkAlarmClick($event)">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </label>
+    <br>
+
+
+    <label class="item item-input item-toggle">
+      <!--<ion-toggle ng-model="tempAlarm" toggle-class="toggle-calm" ng-click="checkAlarmClick()">提醒</ion-toggle>-->
+      <span class="input-label">血糖记录</span>
+      <label class="toggle">
+        <input type="checkbox" ng-checked="newRecord.alarm" ng-click="checkAlarmClick($event)">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </label>
+
+
+
+    <label class="item item-input item-toggle">
+      <!--<ion-toggle ng-model="tempAlarm" toggle-class="toggle-calm" ng-click="checkAlarmClick()">提醒</ion-toggle>-->
+      <span class="input-label">血压记录
+</span>
+      <label class="toggle">
+        <input type="checkbox" ng-checked="newRecord.alarm" ng-click="checkAlarmClick($event)">
+        <div class="track">
+          <div class="handle"></div>
+        </div>
+      </label>
+    </label>
+
+
+
+
+
+  </ion-content>
+
+</ion-view>

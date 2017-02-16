@@ -1,0 +1,48 @@
+<ion-view view-title="血糖纪录">
+  <ion-header-bar class="bar-subheader">
+    <div class="button-bar">
+      <div class="button-bar">
+        <a class="button" tab-state ui-sref="app.tabs.account.sub.1"  style="font-size: 3px">早餐前</a>
+        <a class="button" tab-state ui-sref="app.tabs.account.sub.2"style="font-size: 3px">早餐后</a>
+        <a class="button" tab-state ui-sref="app.tabs.account.sub.3"style="font-size: 3px">午餐前</a>
+        <a class="button"  tab-state ui-sref="app.tabs.account.sub.4"style="font-size: 3px">午餐后</a>
+
+        <a class="button" tab-state ui-sref="app.tabs.account.sub.5"style="font-size: 3px">晚餐前</a>
+        <a class="button" tab-state ui-sref="app.tabs.account.sub.6"style="font-size: 3px">晚餐后</a>
+        <a class="button"  tab-state ui-sref="app.tabs.account.sub.7"style="font-size: 3px">睡觉前</a>
+      </div>
+    </div>
+  </ion-header-bar>
+
+  <ion-content>
+    <div ui-view></div>
+
+    <div id="container" style="width: 150px; height:200px; margin: 0 auto"></div>
+
+
+
+
+
+    <div class="row" style="padding: 15%">
+      <div class="col col-50">
+        <div class="col-demo"> <div style="float:left;width:32%;text-align:center;margin-right: 1% ">
+          <a class="button button-clear button-dark "  href=""> <br>
+            <img src="img/ce.jpg" style="width: 75px;height: 75px;display: block;margin: auto;border-radius:50%; overflow:hidden;" alt="">
+            <p style="line-height: 20px">测一测</p></a></div></div>
+      </div>
+      <div class="col">
+        <div class="col-demo">  <div style="float:left;width:32%;text-align:center;margin-right: 1% ">
+          <a class="button button-clear button-dark"  href="">
+            <br><img src="img/ji.jpg" style="width: 75px;height: 75px;display: block;margin: auto;border-radius:50%; overflow:hidden;"alt="">
+            <p style="line-height: 20px">记一下</p></a></div></div>
+      </div>
+
+    </div><br><br>
+
+    <ion-item   href="#/tab/chronic-diseasedetail2">
+      <span class="msg"  style="padding: 40%;background-color: blanchedalmond">查看就诊记录</span>
+    </ion-item>
+
+  </ion-content>
+
+</ion-view>

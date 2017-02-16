@@ -1,0 +1,114 @@
+<ion-view view-title="我的家庭医生">
+  <ion-nav-buttons side="right" >
+    <button class="button button-icon icon ion-share" ng-click="show()"  style="color: #b0b0b0" ></button>
+  </ion-nav-buttons>
+
+  <ion-content class="padding">
+
+        <ion-list>
+          <ion-item   class="item-avatar item-icon-right"  type="item-text-wrap"  href="#/tab/minehealth-detail" >
+            <img ng-src="img/mike.png"  >
+            <h2 >1862798001</h2>
+            <p class="font_bk" >无病史</p>
+             <div   class="zz ">
+               <a class="item item-icon-left"  >
+                 <i class="icon ion-location"  ></i>
+             南京市建邺玲珑花园
+            </a></div>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+          </ion-item>
+
+          <div class="row" style="border-bottom: 1px solid #ddd">
+            <div class="col col-50"style="font-size: larger;   color: #004444">[家庭成员]</div>
+          </div>
+
+          <div class="row" style="border-bottom: 2px solid #ddd;height: 155px ">
+            <div class="col .col-25" >
+              <img src=" img/perry.png"height="80"width="80" alt="" >
+              <p style="font-size: 10px;line-height: 3">女儿[2岁体检到期]</p>
+            </div>
+
+            <div class="col .col-25">
+              <img src="img/ben.png "height="80"width="80" alt="">
+              <p style="font-size: 10px; line-height: 3">丈夫[BC报告未拿]</p>
+            </div>
+
+            <div class="col .col-25">
+              <img src="img/mike.png "height="80"width="80" alt="">
+              <p style="font-size: 10px; line-height: 3">父亲[目前血糖正常]</p>
+            </div>
+
+            <div class="col col-25 ">
+            <div class="col-demo"><a class="pdd" href="#/tab/minehealth-familyAdd">
+            <img src="img/add.jpg "height="80"width="80">
+            <h2 style="font-size: 10px">添加家庭成员</h2>
+            </a>
+            </div>
+            </div>
+          </div>
+
+          <div style="position: relative;width: 100%; top: 8px;left: 0px;height: 28px;width: 100%;background-color:transparent;">
+            <a class="subdued" style="position: absolute;left: 4px;bottom: 5px;color: #435356;border: 0;" href="#/tab/location" >
+              <span style="font-size: larger;   color: #004444">［签约医生］</span>
+            </a>
+            <a class="icon ion-plus-circled" href="#/tab/minehealth-more" style="color: #435356;font-size: 28px;position: absolute;right: 10px;bottom: 0px;"></a>
+          </div>
+          <div class="list card">
+            <div class="item item-avatar">
+              <img src="img/mike.png">
+              <p>金胜也  (我的签约医生)</p>
+              <p>
+                男，56岁，住院医师，擅长外科
+              </p>
+              <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                  <i class="icon ion-heart"></i>关注
+                </a>
+                <a class="tab-item" href="#/tab/postMsg">
+                  <i class="icon ion-share"></i>分享
+                </a>
+              </div>
+
+            </div>
+
+            <div class="item item-avatar">
+              <img src="img/mike.png">
+              <p>李胜烨  (父亲的主治医生)</p>
+              <p>
+                南京市人民医院，心脏科副主任
+              </p>
+              <div class="item tabs tabs-secondary tabs-icon-left">
+                <a class="tab-item" href="#">
+                  <i class="icon ion-heart"></i>关注
+                </a>
+                <a class="tab-item" href="#/tab/postMsg">
+                  <i class="icon ion-share"></i>分享
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <ion-item href="#/tab/schedule">
+            <span class="msg">健康日程</span>
+            <i class="icon ion-chevron-right mine-msg-right"></i>
+          </ion-item>
+          <ion-item href="#/tab/privacy">
+            <span class="msg">隐私设置</span>
+            <i class="icon ion-chevron-right mine-msg-right"></i>
+          </ion-item>
+          <ion-item href="#">
+          <span class="msg">密码修改</span>
+          <i class="icon ion-chevron-right mine-msg-right"></i>
+        </ion-item>
+
+          <ion-item href="#">
+            <span class="msg">注销登陆</span>
+            <i class="icon ion-chevron-right mine-msg-right"></i>
+          </ion-item>
+          <div class="blank-h12"></div>
+
+        </ion-list>
+      </ion-content>
+    </ion-view>
+
+

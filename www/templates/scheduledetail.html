@@ -1,0 +1,52 @@
+<ion-view view-title="健康日程设置">
+
+  <!--<ion-nav-buttons side="left">-->
+    <!--<button class="button button-icon icon ion-ios-arrow-back"  ng-click="goback()" ><i>返回</i>-->
+    <!--</button>-->
+  <!--</ion-nav-buttons>-->
+
+  <ion-nav-buttons side="right">
+  <button class="button button-icon icon ion-ios-checkmark-outline"  ng-click="save()" >
+  </button>
+  </ion-nav-buttons>
+  <ion-content>
+
+    <div class="card" >
+      <div  class="item item-icon-left">
+        <div class="icon ion-plus"></div> <input class="textfield ng-pristine ng-untouched" style="border: 0;font-weight: 100" placeholder="添加一个健康提醒" ng-model="msg.name">
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="item item-icon-left">
+        <i class="icon ion-clock"></i> <div class="item item-input">
+        <span class="input-label input_title">点击设置时间</span>
+        <input type="text" ng-model="visitDetail.visitDate"  ng-click="getdateStr('visitDate')"  date-format one-key-clear-input/>
+       </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <a href="" class="item item-icon-left">
+        <i class="icon ion-loop"></i>  <span class="msg">时间重复</span>
+        <select style="width: 120px;">
+          <option value ="a">每天</option>
+          <option value ="b">每星期</option>
+          <option value ="c">每月</option>
+          <option value ="d">每年</option>
+        </select>
+      </a>
+    </div>
+
+<!--<ion-item class="mine-msg-item item">
+      <span class="msg">家人性别：</span>
+      <select style="width: 120px;">
+        <option value ="male">男</option>
+        <option value ="female">女</option>
+      </select>
+    </ion-item>-->
+
+
+  </ion-content>
+
+</ion-view>

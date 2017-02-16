@@ -1,0 +1,53 @@
+
+<ion-view view-title="科患沟通">
+
+  <ion-content   has-header="true">
+    <!-- 消息的刷新-->
+    <ion-refresher pulling-text="..." on-refresh="doRefresh()" pulling-icon=""></ion-refresher>
+
+    <div class="button-bar bar-light">
+      <a class="button  icon-left"    ng-click="nomessage()"   ><i class="icon ion-android-notifications-off"></i> 屏蔽消息</a>
+      <a class="button  icon-left" ng-click="addfriends()"><i class="icon ion-android-person"></i> 加为好友</a>
+      <!-- <a class="button">Third</a> -->
+    </div>
+
+<ion-list>
+
+
+
+  <ion-item href="#" ng-repeat="message in messages track by $index" ng-class="isMyMessage(message)">
+
+    <h2>{{message.sender}}</h2>
+    <img ng-src="{{message.image}}">
+    <p>{{message.txt}}</p>
+
+  </ion-item>
+
+
+
+
+
+</ion-list>
+  </ion-content>
+
+
+
+
+
+  <div class="bar bar-footer bar-positive">
+    <input type="file" id="browseBtn" accept="image/*" />
+    <button class="button icon ion-image chat-bar-btn" id="browse-btn" ng-click="browseFile()"></button>
+
+    <input type="text" id="chat-input" placeholder="输入文字..." ng-model="chatInput" ng-keyup="validateMessage($event)">
+    <button class="button icon ion-paper-airplane chat-bar-btn" ng-click="sendMessage()"></button>
+  </div>
+
+
+
+
+
+
+
+
+
+</ion-view>

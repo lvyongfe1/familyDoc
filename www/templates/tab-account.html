@@ -1,0 +1,74 @@
+
+<ion-view view-title="健康管理">
+  <ion-content class="padding">
+    <ion-refresher on-refresh="doRefresh()" pulling-text="下拉刷新" refreshing-text="正在刷新" refreshing-icon="ion-loading-b"></ion-refresher>
+    <a class="item item-body" href="">
+      <ion-slide-box slide-interval="100" does-continue="true" show-pager="false">
+        <ion-slide>
+          <img class="full-image" src="img/15.jpg" width="100px" height="150px">
+        </ion-slide>
+      </ion-slide-box>
+    </a>
+
+    <div class="row">
+      <div class="col col-25">
+          <img src="img/perry.png"height="70"width="70" alt="">
+        <p> &nbsp&nbsp&nbsp 丈夫</p>
+      </div>
+      <div class="col col-25">
+          <img src="img/ben.png "height="70"width="70" alt="">
+        <p>  &nbsp&nbsp&nbsp女儿</p>
+        </div>
+      <div class="col col-25">
+          <img src="img/mike.png "height="70"width="70">
+        <p> &nbsp&nbsp&nbsp 父亲</p>
+      </div>
+      <div class="col col-25 ">
+          <img src="img/1.jpg "height="70"width="70">
+
+        <p>&nbsp&nbsp&nbsp  陈缘分</p>
+      </div>
+    </div>
+
+    <ion-item href="#/tab/records">
+      <span class="msg">个人健康档案</span>
+      <i class="icon ion-chevron-right mine-msg-right"></i>
+    </ion-item>
+
+    <ion-item href="#/tab/report">
+      <span class="msg">体检报告</span>
+      <i class="icon ion-chevron-right mine-msg-right"></i>
+    </ion-item>
+
+    <ion-item href="#/tab/chronic-disease">
+      <span class="msg">慢性病档案</span>
+      <i class="icon ion-chevron-right mine-msg-right"></i>
+    </ion-item>
+
+
+
+    <!--<ion-item   class="item-avatar item-icon-right"  type="item-text-wrap"  href="#/tab/minehealth-detail" >-->
+      <!--<img ng-src="img/mike.png"  >-->
+
+
+
+    <div class="button-bar" style="border-bottom: 1px solid #ddd;height: 150px;padding:0px 1%">
+      <div style="float:left;width:32%;text-align:center;margin-right: 1% ">
+        <a class="button button-clear button-dark "  href="#/tab/diagnosis">
+          <br><img src="img/7.jpg" style="width: 75px;height: 75px;display: block;margin: auto;border-radius:50%; overflow:hidden;" alt="">
+          <p style="line-height: 20px">诊疗信息</p></a></div>
+
+      <div style="float:left;width:32%;text-align:center;margin-right: 1% ">
+        <a class="button button-clear button-dark" href="#/tab/bloodpressure">
+          <br><img src="img/8.jpg" style="width: 75px;height: 75px;display: block;margin: auto;border-radius:50%; overflow:hidden;"alt="">
+          <p style="line-height: 20px">血压记录</p></a></div>
+
+      <div style="float:left;width:32%;text-align:center;margin-right: 1% ">
+        <a class="button button-clear button-dark" href="#/tab/bloodsugar">
+          <br><img src="img/9.jpg"style="width: 75px;height: 75px;display: block;margin: auto;border-radius:50%; overflow:hidden;" alt="">
+          <p style="line-height: 20px">血糖记录</p></a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

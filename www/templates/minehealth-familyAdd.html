@@ -1,0 +1,74 @@
+<ion-view title="添加家庭成员">
+
+  <ion-content scroll="false">
+    <div class=".light-bg padding-top padding-bottom">
+      <label id="info" class=" item item-icon-right" ng-click="func_showAction()">
+        <img  id="touxiang" src="img/details/detail01.jpg" >
+        <span>请选择一个代表头像</span>
+      </label>
+    </div>
+
+    <div class="col " style=" background-color: whitesmoke;     border-bottom: 1px solid #ddd">
+      <div class="col col-50" style="font-size: larger;   color: darkgray" >必填项 </div>
+    </div>
+
+
+    <ion-item class="mine-msg-item item">
+      <span class="msg">家人姓名：</span>
+      <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请填写家人真实姓名" ng-model="msg.name">
+    </ion-item>
+
+
+    <ion-item class="mine-msg-item item">
+      <span class="msg">家人性别：</span>
+      <select style="width: 120px;">
+        <option value ="male">男</option>
+        <option value ="female">女</option>
+      </select>
+    </ion-item>
+
+
+    <ion-item class="mine-msg-item item">
+      <span class="msg">出生日期：</span>
+      <input style="display: -webkit-inline-box;padding: 0px;" class="textfield ng-pristine ng-untouched ng-valid" type="date" ng-model="msg.birthday">
+    </ion-item>
+
+    <ion-item class="mine-msg-item item">
+      <span class="msg">现所在地：</span>
+      <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请选择家人现所在地" ng-model="msg.id">
+    </ion-item>
+
+    <ion-item class="mine-msg-item item">
+      <span class="msg">与您关系：</span>
+      <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请选择您两的关系" ng-model="msg.id">
+    </ion-item>
+
+
+
+
+    <div class="col " style=" background-color: whitesmoke;     border-bottom: 1px solid #ddd">
+      <div class="col col-50" style="font-size: larger;   color: darkgray" >选填项 </div>
+    </div>
+
+    <ion-item class="mine-msg-item item">
+      <span class="msg">身份证号：</span>
+      <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="建议填写" ng-model="msg.id">
+    </ion-item>
+
+    <div class="col " style=" background-color: whitesmoke;     border-bottom: 1px solid #ddd">
+      <div class="col col-100" style="font-size: 12px;   color: darkgray" >
+
+        身份证号仅用于家庭关系的绑定，以及个人健康数据与家人（或
+
+        医生）的同步，并不会向其他人展示。不填写则无法同步数据。
+      </div>
+    </div>
+
+
+    <div class="padding-top">
+      <button class="button button-block button-positive " ng-click="func_exitApp()">保存</button>
+    </div>
+
+
+  </ion-content>
+</ion-view>

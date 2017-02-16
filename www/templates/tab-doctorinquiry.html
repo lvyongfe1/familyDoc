@@ -1,0 +1,133 @@
+
+    <ion-view view-title="我的消息"   >
+      <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-plus  " ng-click="openPopover($event)" style="color: #b0b0b0" ></button>
+
+      </ion-nav-buttons>
+      <script id="my-popover.html" type="text/ng-template">
+        <ion-popover-view style="background-color: black;height: 75px;width: 145px">
+
+              <a class="item item-icon-left" style="background-color: black;color: aliceblue" href="#/tab/invitationcode">
+                <i class="icon ion-email"style="color: aliceblue"></i>
+                邀请码
+              </a>
+
+              <a class="item item-icon-left" style="background-color: black;color: aliceblue"href="">
+                <i class="icon ion-email"></i>
+                扫一扫
+              </a>
+
+        </ion-popover-view>
+      </script>
+
+      <ion-content on-swipe-left="onSwipeLeft()">
+
+
+
+        <!-- 搜索框-->
+        <div align-title="center" class="bgc-orange bar bar-header">
+          <a class="tab-cancel-btn" ng-click="search()">搜索</a>
+          <input ng-model="tag" class="tab-search" auto-focus-when="focus" placeholder="请输入搜索关键词" ng-model="searchInput">
+          <i class="icon ion-ios-search tab-search-cur"></i>
+          <i class="icon ion-close-circled tab-search-close-cur" ng-click="delete()"></i>
+        </div>
+
+
+        <div class="row " style="border-bottom: 1px solid lightgray;" >
+          <div class="col col-20   tabs-striped">
+            <div class="col-demo main-select" ng-class="{activity : type == 'all'}" ng-click="changeType(0)">  全部</div>
+          </div>
+          <div class="col col-20">
+            <div class="col-demo main-select" ng-class="{activity : type == 'doc'}" ng-click="changeType(1)">  医生</div>
+          </div>
+
+          <div class="col col-20">
+            <div class="col-demo main-select" ng-class="{activity : type == 'family'}" ng-click="changeType(2)">  家人</div>
+          </div>
+          <div class="col col-20">
+            <div class="col-demo main-select" ng-class="{activity : type == 'friends'}" ng-click="changeType(3)">  朋友</div>
+          </div>
+          <div class="col col-20">
+            <div class="col-demo main-select" ng-class="{activity : type == 'message'}" ng-click="changeType(4)">  消息</div>
+          </div>
+
+        </div>
+
+
+        <ion-list>
+          <!-- 全部 -->
+          <div ng-if="type == 'all'">
+            <ion-list rj-close-back-drop>
+              <ion-item class="item-avatar" ng-class="{'rj-item-top': message.isTop}" on-hold="popupMessageOpthins(message)" rj-hold-active ng-repeat="message in messages | orderBy:['isTop', 'lastMessage.timeFrome1970']:true" ng-click="messageDetils(message)">
+                <img ng-src="{{message.pic}}">
+                <span class="rj-sm-red-icon" ng-show="message.showHints"><p ng-bind="message.noReadMessages"></p></span>
+                <h2 ng-bind="message.name"></h2>
+                <p class="rj-list-p" ng-bind="message.lastMessage.content"></p>
+                <span class="rj-push-right" ng-bind="message.lastMessage.time"></span>
+              </ion-item>
+            </ion-list>
+            </div>
+
+
+          <!-- 医生 -->
+          <div ng-if="type == 'doc'">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/message-detail1">
+              <img ng-src="img/mike.png">
+              <h2>棒棒锤</h2>
+              <p>明天什么时候去吃饭？？</p>
+              <ion-option-button class="button-assertive" ng-click="remove(chat)">删除</ion-option-button>
+            </ion-item>
+            </div>
+
+
+          <!-- 家人 -->
+          <div ng-if="type == 'family'">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="#/tab/message-detail2">
+              <img ng-src="img/mike.png">
+              <h2>cc（我的签约医生）</h2>
+              <p>住院医师 外科</p>
+              <p>医院：南京市雨花第一医院</p>
+              <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                删除
+              </ion-option-button>
+            </ion-item>
+          </div>
+
+          <!-- 朋友 -->
+          <div ng-if="type == 'friends'">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="">
+              <img ng-src="img/mike.png">
+              <h2>yy（我的签约医生）</h2>
+              <p>住院医师 外科</p>
+              <p>医院：南京市雨花第一医院</p>
+              <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                删除
+              </ion-option-button>
+            </ion-item>
+          </div>
+
+
+          <!-- 消息 -->
+          <div ng-if="type == 'message'">
+            <ion-item class="item-remove-animate item-avatar item-icon-right" type="item-text-wrap" href="">
+              <img ng-src="img/mike.png">
+              <h2>uu（我的签约医生）</h2>
+              <p>住院医师 外科</p>
+              <p>医院：南京市雨花第一医院</p>
+              <ion-option-button class="button-assertive" ng-click="remove(chat)">
+                删除
+              </ion-option-button>
+            </ion-item>
+          </div>
+
+
+
+
+          </ion-list>
+
+
+
+        </ion-content >
+
+
+    </ion-view>

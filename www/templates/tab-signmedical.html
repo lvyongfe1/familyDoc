@@ -1,0 +1,77 @@
+<ion-view view-title="签约医疗"    ng-init="getpoint()">
+  <ion-content class="padding">
+    <ion-refresher on-refresh="doRefresh()" pulling-text="下拉刷新" refreshing-text="正在刷新" refreshing-icon="ion-loading-b"></ion-refresher>
+
+
+    <ion-list> <ion-item> <button class="button button-block button-calm" ng-click="getpoint()"> 开始定位
+    </button> </ion-item>
+      <ion-item> 经度：{{ret.longitude}} 纬度：{{ret.latitude}} </ion-item> <ion-item>
+        <div id="allmap" style="height: 300px;"> </div> </ion-item> </ion-list>
+
+
+
+
+    <div style="position: relative;width: 100%; top: 8px;left: 0px;height: 28px;width: 100%;background-color:transparent;">
+      <a class="subdued" style="position: absolute;left: 4px;bottom: 5px;color: #435356;border: 0;" href="" >
+        <span style="font-size: larger;   color: #004444">［签约医院］</span>
+      </a>
+      <a class="icon ion-plus-circled" href="#/tab/signmedical-more" style="color: #435356;font-size: 15px;position: absolute;right: 10px;bottom: 0px;"><i>医院列表</i></a>
+    </div><br>
+
+    <div class="backgound-default group-list">
+      <a href="">
+        <img class="img-default group-img" src="img/hos.jpg">
+        <span class="group-title dm-nowrap-1">南京市雨花医院</span>
+        <span class="group-position dm-nowrap-1"style="color: red">三甲 ｜ 综合</span>
+        <span class="group-member">地址：雨花西路113号</span>
+      </a>
+    </div>
+
+
+    <div class="button-bar" style="border-bottom: 1px solid #ddd;height: 150px;padding:0px 1%">
+
+      <div style="float:left;width:32%;text-align:center;margin-right: 1% ">
+        <a class="button button-clear button-dark "> <br><img src="img/q.jpg" style="height: 70px ;width: 70px" alt="">
+          <p style="line-height: 20px">服务预约</p></a></div>
+
+
+
+      <div style="float:left;width:32%;text-align:center;margin-right: 1% ">
+        <a class="button button-clear button-dark" href=""><br><img src="img/w.jpg" style="height: 70px ;width: 70px"alt="">
+          <p style="line-height: 20px">医疗咨询</p></a></div>
+
+      <div style="float:left;width:32%;text-align:center;margin-right: 1% "   >
+        <a class="button button-clear button-dark"   href="#/tab/notice"><br><img src="img/e.jpg" style="height: 70px ;width: 70px"alt=""    >
+          <p style="line-height: 20px">咨询公告</p></a></div>
+
+    </div><br>
+
+    <div style="position: relative;width: 100%; top: 8px;left: 0px;height: 28px;width: 100%;background-color:transparent;">
+      <a class="subdued" style="position: absolute;left: 4px;bottom: 5px;color: #435356;border: 0;" href="#/tab/location" >
+        <span style="font-size: larger;   color: #004444">［签约医生］</span>
+      </a>
+      <a class="icon ion-plus-circled" href="#/tab/doc-more" style="color: #435356;font-size: 15px;position: absolute;right: 10px;bottom: 0px;"><i>更多医生</i></a>
+    </div><br>
+
+    <div class="item item-avatar">
+      <img src="img/mike.png">
+      <p>金胜也  (我的签约医生)</p>
+      <p>
+        男，56岁，住院医师，擅长外科
+      </p>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+          <i class="icon ion-heart"></i>关注
+        </a>
+        <a class="tab-item" href="#/tab/postMsg">
+          <i class="icon ion-share"></i>分享
+        </a>
+      </div>
+
+    </div>
+
+
+
+
+  </ion-content>
+</ion-view>

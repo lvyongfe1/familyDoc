@@ -1,0 +1,216 @@
+
+<ion-view title="个人健康档案">
+
+
+  <ion-content has-bouncing="true" overflow-scroll="false">
+    <ion-list>
+      <img src="img/mike.png" style="width: 100px;height: 100px;display: block;margin: auto;border-radius:50%; overflow:hidden;" ng-click="changeImg()">
+      <div class="blank-h12"></div>
+
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">姓名：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入姓名" ng-model="msg.name">
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">性别：</span>
+        <select style="width: 120px;">
+          <option value ="male">男</option>
+          <option value ="female">女</option>
+        </select>
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">出生日期：</span>
+        <input style="display: -webkit-inline-box;padding: 0px;" class="textfield ng-pristine ng-untouched ng-valid" type="date" ng-model="msg.birthday">
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">身份证号：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入身份证号" ng-model="msg.id">
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">电话号码：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入号码" ng-model="msg.tel">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">常住类型：</span>
+        <select style="width: 120px;">
+          <option value ="huji">户籍</option>
+          <option value ="other">其他</option>
+        </select>
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+      <span class="msg">现住地区：</span>
+      <input style="background: #fff;display: -webkit-inline-box;padding: 0px;width: 280px;" type="text" placeholder="请选择地区" readonly  ng-model="template.area" ng-click="showCitySelect()">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">所属街道：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入街道" ng-model="msg.address">
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">联系人：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入联系人" ng-model="msg.friend">
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">联系人号码：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入联系人号码" ng-model="msg.friendtel">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">民族：</span>
+        <select style="width: 120px;">
+          <option value ="汉">汉族</option>
+          <option value ="other">其他</option>
+        </select>
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">ABO血型：</span>
+        <select style="width: 120px;">
+          <option value ="A">A</option>
+          <option value ="B">B</option>
+          <option value ="O">O</option>
+          <option value ="AB">AB</option>
+        </select>
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">RH血型：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入RH血型" ng-model="msg.blood">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">文化程度：</span>
+        <select style="width: 120px;">
+          <option value ="1">本科</option>
+          <option value ="2">硕士</option>
+          <option value ="3">博士</option>
+          <option value ="4">其他</option>
+        </select>
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">职业：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入职业" ng-model="msg.job">
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">婚姻状况：</span>
+        <select style="width: 120px;">
+          <option value ="married">已婚</option>
+          <option value ="nomarried">未婚</option>
+        </select>
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">医疗费用支付：</span>
+        <select style="width: 120px;">
+          <option value ="5">城镇居民基本医疗保险</option>
+          <option value ="6">其他</option>
+        </select>
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">药物过敏史：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入过敏史" ng-model="msg.allergy">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">暴露史：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入暴露史" ng-model="msg.Exposure">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">既往史：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入既往史" ng-model="msg.past ">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">家族史：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入家族史" ng-model="msg.family">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">遗传病史：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入遗传病史" ng-model="msg.genetic">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">残疾情况：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入残疾情况" ng-model="msg.disability">
+      </ion-item>
+
+      <div class="col " style="border-bottom: 1px solid #ddd">
+      <div class="col col-50" style="font-size: larger;   color: darksalmon" >生活环境 </div>
+      </div>
+
+      <ion-item class="mine-msg-item item">
+        <span class="msg">厨房排风设施：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入厨房排风设施" ng-model="msg.air">
+      </ion-item>
+      <ion-item class="mine-msg-item item">
+        <span class="msg">燃料类型：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入燃料类型" ng-model="msg.fuel">
+      </ion-item>
+      <ion-item class="mine-msg-item item">
+        <span class="msg">饮水：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入饮水" ng-model="msg.water">
+      </ion-item>
+      <ion-item class="mine-msg-item item">
+        <span class="msg">厕所：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入厕所" ng-model="msg.toilet">
+      </ion-item>
+      <ion-item class="mine-msg-item item">
+        <span class="msg">禽畜栏：</span>
+        <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入禽畜栏" ng-model="msg.Livestock">
+      </ion-item>
+
+      <div class="col " style="border-bottom: 1px solid #ddd">
+        <div class="col col-50" style="font-size: larger;   color: darksalmon" >建档信息 </div>
+      </div>
+
+      <ion-item class="mine-msg-item item">
+      <span class="msg">建档单位：</span>
+      <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入建档单位" ng-model="msg.inputting">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+      <span class="msg">建档人：</span>
+      <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入建档人" ng-model="msg.person">
+      </ion-item>
+
+
+      <ion-item class="mine-msg-item item">
+      <span class="msg">责任医生：</span>
+      <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入责任医生" ng-model="msg.doc">
+      </ion-item>
+
+      <ion-item class="mine-msg-item item">
+      <span class="msg">建党日期：</span>
+      <input class="textfield ng-pristine ng-untouched" style="border: 0;" placeholder="请输入建党日期" ng-model="msg.data">
+      </ion-item>
+
+
+    </ion-list>
+  </ion-content>
+
+  <!--选择地区-->
+  <div class="js-citySelestNode tab-nav tabs hide-on-keyboard-open"  style="padding:0 10px;width:100%;height:auto;background-color:#fff;"></div>
+</ion-view>
